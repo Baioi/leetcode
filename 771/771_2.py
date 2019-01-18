@@ -10,8 +10,7 @@ class Solution(object):
         for j in J:
             dic[j] = 0
         for s in S:
-            dic[s] += 1
-        for s in S:
-            count += dic[s]
+            if s in dic:
+                count += 1
         print(count)
         return count
