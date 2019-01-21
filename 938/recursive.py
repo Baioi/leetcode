@@ -10,9 +10,9 @@ class Solution(object):
     def search(self, node, L, R):
         if node.val >= L and node.val <= R:
             self.num += node.val
-        if node.left:
+        if node.left and node.val > L:
             self.search(node.left, L, R)
-        if node.right:
+        if node.right and node.val < R:
             self.search(node.right, L, R)
 
     def rangeSumBST(self, root, L, R):
